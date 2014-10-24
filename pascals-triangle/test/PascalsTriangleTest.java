@@ -32,6 +32,9 @@ public class PascalsTriangleTest {
 		
 		int[][] testResult = this.testPascalsTriangle.getPascalsTriangleAs2DArray(1);
 		
+		assertTrue(testResult.length == 1);
+		
+		assertTrue(testResult[0].length == 1);
 		assertTrue(testResult[0][0] == 1);
 	}
 	
@@ -40,7 +43,12 @@ public class PascalsTriangleTest {
 		
 		int[][] testResult = this.testPascalsTriangle.getPascalsTriangleAs2DArray(2);
 		
+		assertTrue(testResult.length == 2);
+		
+		assertTrue(testResult[0].length == 1);
 		assertTrue(testResult[0][0] == 1);
+		
+		assertTrue(testResult[1].length == 2);
 		assertTrue(testResult[1][0] == 1);
 		assertTrue(testResult[1][1] == 1);
 	}
@@ -50,14 +58,78 @@ public class PascalsTriangleTest {
 		
 		int[][] testResult = this.testPascalsTriangle.getPascalsTriangleAs2DArray(3);
 		
+		assertTrue(testResult.length == 3);
+		
+		assertTrue(testResult[0].length == 1);
 		assertTrue(testResult[0][0] == 1);
 
+		assertTrue(testResult[1].length == 2);
 		assertTrue(testResult[1][0] == 1);
 		assertTrue(testResult[1][1] == 1);
 
+		assertTrue(testResult[2].length == 3);
 		assertTrue(testResult[2][0] == 1);
 		assertTrue(testResult[2][1] == 2);
 		assertTrue(testResult[2][2] == 1);
+	}
+
+	@Test
+	public void testGetPascalsTriangleAs2DArrayWithHeight4() {
+		
+		int[][] testResult = this.testPascalsTriangle.getPascalsTriangleAs2DArray(4);
+		
+		assertTrue(testResult.length == 4);
+		
+		assertTrue(testResult[0].length == 1);
+		assertTrue(testResult[0][0] == 1);
+
+		assertTrue(testResult[1].length == 2);
+		assertTrue(testResult[1][0] == 1);
+		assertTrue(testResult[1][1] == 1);
+
+		assertTrue(testResult[2].length == 3);
+		assertTrue(testResult[2][0] == 1);
+		assertTrue(testResult[2][1] == 2);
+		assertTrue(testResult[2][2] == 1);
+		
+		assertTrue(testResult[3].length == 4);
+		assertTrue(testResult[3][0] == 1);
+		assertTrue(testResult[3][1] == 3);
+		assertTrue(testResult[3][2] == 3);
+		assertTrue(testResult[3][3] == 1);	
+	}
+
+	@Test
+	public void testGetPascalsTriangleAs2DArrayWithHeight5() {
+		
+		int[][] testResult = this.testPascalsTriangle.getPascalsTriangleAs2DArray(5);
+		
+		assertTrue(testResult.length == 5);
+		
+		assertTrue(testResult[0].length == 1);
+		assertTrue(testResult[0][0] == 1);
+
+		assertTrue(testResult[1].length == 2);
+		assertTrue(testResult[1][0] == 1);
+		assertTrue(testResult[1][1] == 1);
+
+		assertTrue(testResult[2].length == 3);
+		assertTrue(testResult[2][0] == 1);
+		assertTrue(testResult[2][1] == 2);
+		assertTrue(testResult[2][2] == 1);
+		
+		assertTrue(testResult[3].length == 4);
+		assertTrue(testResult[3][0] == 1);
+		assertTrue(testResult[3][1] == 3);
+		assertTrue(testResult[3][2] == 3);
+		assertTrue(testResult[3][3] == 1);	
+		
+		assertTrue(testResult[4].length == 5);
+		assertTrue(testResult[4][0] == 1);
+		assertTrue(testResult[4][1] == 4);
+		assertTrue(testResult[4][2] == 6);
+		assertTrue(testResult[4][3] == 4);
+		assertTrue(testResult[4][4] == 1);
 	}
 
 }
