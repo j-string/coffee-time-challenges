@@ -4,6 +4,10 @@ import org.junit.Before;
 import org.junit.After;
 import org.junit.Test;
 
+/**
+ * 
+ * @author Justin Stringer
+ */
 public class BracketsMatcherTest {
 
 	private BracketsMatcher testBracketsMatcher;
