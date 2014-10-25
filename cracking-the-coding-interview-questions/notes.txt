@@ -1,0 +1,5 @@
+javac -d ./bin ./src/chapter/one/Q1P1StringWithAllUniqueCharacters.java 
+
+javac -cp ./lib/junit-4.11.jar:./lib/hamcrest-core-1.3.jar:./bin -d ./bin ./test/chapter/one/Q1P1StringWithAllUniqueCharactersTest.java
+
+java -cp ./lib/junit-4.11.jar:./lib/hamcrest-core-1.3.jar:./bin org.junit.runner.JUnitCore chapter.one.Q1P1StringWithAllUniqueCharactersTest
