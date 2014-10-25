@@ -25,8 +25,6 @@ public class P2EvenFibonacciNumbers {
 		Long sumOfEvenNumbers = 0l;
 
 		while (currentNumber < ceiling) {
-			System.out.println("currentNumber=" + currentNumber);
-
 			if (currentNumber % 2 == 0) {
 				sumOfEvenNumbers += currentNumber;
 			}
