@@ -17,4 +17,23 @@ public class Q1P2ReverseString {
 		return reversedString.toString();
 	}
 
+	public Character[] reverseCharacterArrayInPlace(Character[] inputCharacterArray) {
+	
+		if (inputCharacterArray != null && inputCharacterArray.length != 0) { 
+			int lastCharacter = 0;
+			while (inputCharacterArray[lastCharacter] != null ) { lastCharacter++; }
+
+			int i = 0;
+			int j = lastCharacter - 1;
+			while (i<j) {
+				Character tempCharacter = inputCharacterArray[i];
+				inputCharacterArray[i] = inputCharacterArray[j];
+				inputCharacterArray[j] = tempCharacter;
+				i++;
+				j--;
+			}
+		}
+		
+		return inputCharacterArray;
+	}
 }

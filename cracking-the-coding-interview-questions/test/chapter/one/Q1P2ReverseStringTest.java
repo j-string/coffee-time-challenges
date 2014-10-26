@@ -17,6 +17,7 @@ public class Q1P2ReverseStringTest {
 	@After
 	public void tearDown() { this.testQ1P2ReverseString = null; }
 
+	//string reversal tests
 	@Test
 	public void testReverseStringForNull() { assertNull(this.testQ1P2ReverseString.reverseString(null)); }
 
@@ -28,4 +29,24 @@ public class Q1P2ReverseStringTest {
 
 	@Test
 	public void testReverseStringForStringWithLengthOfTen() { assertEquals("gnirtStset", this.testQ1P2ReverseString.reverseString("testString")); }
+
+	//character array reversal tests
+	@Test
+	public void testReverseCharacterArrayInPlaceForNull() { assertNull(this.testQ1P2ReverseString.reverseCharacterArrayInPlace(null)); }
+
+	@Test
+	public void testReverseCharacterArrayInPlaceForEmptyArray() { assertEquals(new Character[0], this.testQ1P2ReverseString.reverseCharacterArrayInPlace(new Character[0])); }
+
+	@Test
+	public void testReverseCharacterArrayInPlaceForArrayWithLengthOfOne() { 
+		Character[] testCharacterArray = {'x'};
+		assertEquals(testCharacterArray, this.testQ1P2ReverseString.reverseCharacterArrayInPlace(testCharacterArray)); 
+	}
+
+	@Test
+	public void testReverseCharacterArrayInPlaceForArrayWithLengthOfTen() { 
+		Character[] testCharacterArray = {'t', 'e', 's', 't', 'S', 't', 'r', 'i', 'n', 'g', null, null};
+		Character[] resultCharacterArray = {'g', 'n', 'i', 'r', 't', 'S', 't', 's', 'e', 't', null, null};
+		assertEquals(resultCharacterArray, this.testQ1P2ReverseString.reverseCharacterArrayInPlace(testCharacterArray)); 
+	}
 }
