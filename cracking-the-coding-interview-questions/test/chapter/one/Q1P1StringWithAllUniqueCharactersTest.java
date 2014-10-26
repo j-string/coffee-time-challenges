@@ -6,11 +6,9 @@ import org.junit.After;
 
 import static org.junit.Assert.*;
 
-import chapter.one.Q1P1StringWithAllUniqueCharacters;
-
 /**
- * @author Justin Stringer
  *
+ * @author Justin Stringer
  */
 public class Q1P1StringWithAllUniqueCharactersTest {
 
@@ -22,7 +20,7 @@ public class Q1P1StringWithAllUniqueCharactersTest {
         @After
         public void tearDown() { this.testQ1P1StringWithAllUniqueCharacters = null; }
 
-	// start set implementation tests
+	    // start set implementation tests
         @Test
         public void testHasAllUniqueCharactersForNull() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharacters(null)); }
 
@@ -38,7 +36,7 @@ public class Q1P1StringWithAllUniqueCharactersTest {
         @Test
         public void testHasAllUniqueCharactersForFalse() { assertFalse(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharacters("no no")); }
 
-	// start recursive implementation tests
+	    // start recursive implementation tests
         @Test
         public void testHasAllUniqueCharactersForNullRecursive() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive(null)); }
 
@@ -54,7 +52,7 @@ public class Q1P1StringWithAllUniqueCharactersTest {
         @Test
         public void testHasAllUniqueCharactersForFalseRecursive() { assertFalse(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive("no no")); }
 
-	// start recursive implementation tests
+	    // start no recursion and no set implementation tests
         @Test
         public void testHasAllUniqueCharactersForNullNoRecursionNoSet() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet(null)); }
 
