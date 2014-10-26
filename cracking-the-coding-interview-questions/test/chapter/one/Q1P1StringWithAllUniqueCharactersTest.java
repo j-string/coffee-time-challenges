@@ -22,6 +22,7 @@ public class Q1P1StringWithAllUniqueCharactersTest {
         @After
         public void tearDown() { this.testQ1P1StringWithAllUniqueCharacters = null; }
 
+	// start set implementation tests
         @Test
         public void testHasAllUniqueCharactersForNull() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharacters(null)); }
 
@@ -37,4 +38,35 @@ public class Q1P1StringWithAllUniqueCharactersTest {
         @Test
         public void testHasAllUniqueCharactersForFalse() { assertFalse(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharacters("no no")); }
 
+	// start recursive implementation tests
+        @Test
+        public void testHasAllUniqueCharactersForNullRecursive() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive(null)); }
+
+        @Test
+        public void testHasAllUniqueCharactersForEmptyStringRecursive() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive(null)); }
+
+        @Test
+        public void testHasAllUniqueCharactersForStringWithOneCharacterRecursive() { assertTrue(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive("y")); }
+
+        @Test
+        public void testHasAllUniqueCharactersForTrueRecursive() { assertTrue(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive("yes")); }
+
+        @Test
+        public void testHasAllUniqueCharactersForFalseRecursive() { assertFalse(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersRecursive("no no")); }
+
+	// start recursive implementation tests
+        @Test
+        public void testHasAllUniqueCharactersForNullNoRecursionNoSet() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet(null)); }
+
+        @Test
+        public void testHasAllUniqueCharactersForEmptyStringNoRecursionNoSet() { assertNull(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet(null)); }
+
+        @Test
+        public void testHasAllUniqueCharactersForStringWithOneCharacterNoRecursionNoSet() { assertTrue(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet("y")); }
+
+        @Test
+        public void testHasAllUniqueCharactersForTrueNoRecursionNoSet() { assertTrue(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet("yes")); }
+
+        @Test
+        public void testHasAllUniqueCharactersForFalseNoRecursionNoSet() { assertFalse(this.testQ1P1StringWithAllUniqueCharacters.hasAllUniqueCharactersNoRecursionNoSet("no no")); }
 }
