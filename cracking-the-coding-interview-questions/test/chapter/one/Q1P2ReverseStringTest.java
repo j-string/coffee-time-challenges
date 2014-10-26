@@ -39,7 +39,7 @@ public class Q1P2ReverseStringTest {
 
 	@Test
 	public void testReverseCharacterArrayInPlaceForArrayWithLengthOfOne() { 
-		Character[] testCharacterArray = {'x'};
+		Character[] testCharacterArray = {'x', null};
 		assertEquals(testCharacterArray, this.testQ1P2ReverseString.reverseCharacterArrayInPlace(testCharacterArray)); 
 	}
 

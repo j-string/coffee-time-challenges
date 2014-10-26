@@ -18,7 +18,7 @@ public class Q1P2ReverseString {
 	}
 
 	public Character[] reverseCharacterArrayInPlace(Character[] inputCharacterArray) {
-	
+
 		if (inputCharacterArray != null && inputCharacterArray.length != 0) { 
 			int lastCharacter = 0;
 			while (inputCharacterArray[lastCharacter] != null ) { lastCharacter++; }
