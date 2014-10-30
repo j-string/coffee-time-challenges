@@ -150,4 +150,16 @@ public class Q1P4SpaceCharacterSubstitutionTest {
 						.replaceSpaceCharacters("a b    "));
 	}
 
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P4SpaceCharacterSubstitution#replaceSpaceCharacters(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testReplace1SpaceCharacters() {
+		assertEquals("a%20b  ",
+				this.testQ1P4SpaceCharacterSubstitution
+						.replaceSpaceCharacters("a b    "));
+	}
+
 }
