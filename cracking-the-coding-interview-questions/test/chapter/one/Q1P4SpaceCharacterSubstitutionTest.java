@@ -155,6 +155,8 @@ public class Q1P4SpaceCharacterSubstitutionTest {
 		System.out.println(new String(testCharArray));
 		System.out.println(this.testQ1P4SpaceCharacterSubstitution
 				.replaceSpaceCharacters(new String(testCharArray)));
+		
+		
 	}
 
 	// /**
