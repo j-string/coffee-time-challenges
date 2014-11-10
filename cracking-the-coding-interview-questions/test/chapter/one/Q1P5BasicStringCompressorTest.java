@@ -96,4 +96,14 @@ public class Q1P5BasicStringCompressorTest {
 		assertEquals("a2b1c5a1", this.testQ1P5BasicStringCompressor.compressString("aabccccca"));
 	}
 
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressString(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testCompressStringForStringThatDoesntGetSmaller() {
+		assertEquals("abcd", this.testQ1P5BasicStringCompressor.compressString("abcd"));
+	}
+
 }

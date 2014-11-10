@@ -37,7 +37,11 @@ public class Q1P5BasicStringCompressor {
 		returnStringBuilder.append(inputString.charAt(inputString.length() - 1));
 		returnStringBuilder.append(charCount);
 
-		return returnStringBuilder.toString();
+		if (returnStringBuilder.toString().length() >= inputString.length()) {
+			return inputString;
+		} else {
+			return returnStringBuilder.toString();
+		}
 	}
 
 }
