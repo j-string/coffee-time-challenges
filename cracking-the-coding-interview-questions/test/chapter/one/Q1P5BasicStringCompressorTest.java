@@ -106,4 +106,91 @@ public class Q1P5BasicStringCompressorTest {
 		assertEquals("abcd", this.testQ1P5BasicStringCompressor.compressString("abcd"));
 	}
 
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressString(java.lang.String)}
+	 * .
+	 */
+	@Test
+	public void testCompressStringForStringWithMoreThan9RepeatingCharacters() {
+		assertEquals("a2b1c10a1", this.testQ1P5BasicStringCompressor.compressString("aabcccccccccca"));
+	}
+
+	// Start char array tests
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForNull() {
+		assertNull(this.testQ1P5BasicStringCompressor.compressStringAsCharArray(null));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForEmptyArray() {
+		assertArrayEquals(new char[0], this.testQ1P5BasicStringCompressor.compressStringAsCharArray(new char[0]));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringForAsCharArrayStringOfLength1() {
+		assertArrayEquals(new char[] { 'a' },
+				this.testQ1P5BasicStringCompressor.compressStringAsCharArray(new char[] { 'a' }));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForStringaabcccccaaa() {
+		assertArrayEquals("a2b1c5a3".toCharArray(),
+				this.testQ1P5BasicStringCompressor.compressStringAsCharArray("aabcccccaaa".toCharArray()));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForStringaabccccca() {
+		assertArrayEquals("a2b1c5a1".toCharArray(),
+				this.testQ1P5BasicStringCompressor.compressStringAsCharArray("aabccccca".toCharArray()));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForStringThatDoesntGetSmaller() {
+		assertArrayEquals("abcd".toCharArray(),
+				this.testQ1P5BasicStringCompressor.compressStringAsCharArray("abcd".toCharArray()));
+	}
+
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P5BasicStringCompressor#compressStringAsCharArray(char[])}
+	 * .
+	 */
+	@Test
+	public void testCompressStringAsCharArrayForStringWithMoreThan9RepeatingCharacters() {
+		assertArrayEquals("a2b1c10a1".toCharArray(),
+				this.testQ1P5BasicStringCompressor.compressStringAsCharArray("aabcccccccccca".toCharArray()));
+	}
+
 }
