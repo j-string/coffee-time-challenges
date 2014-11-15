@@ -16,13 +16,15 @@ public class Q1P6RotateMatrixTest {
 	 * @throws java.lang.Exception
 	 */
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {}
+	public static void setUpBeforeClass() throws Exception {
+	}
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@AfterClass
-	public static void tearDownAfterClass() throws Exception {}
+	public static void tearDownAfterClass() throws Exception {
+	}
 
 	/**
 	 * @throws java.lang.Exception
@@ -39,7 +41,6 @@ public class Q1P6RotateMatrixTest {
 	public void tearDown() throws Exception {
 		this.testQ1P6RotateMatrix = null;
 	}
-
 
 	/**
 	 * Test method for
@@ -65,7 +66,7 @@ public class Q1P6RotateMatrixTest {
 	 */
 	@Test
 	public void testRotateMatrixForMatrixSize1() {
-		assertArrayEquals(new int[][] {{1}}, this.testQ1P6RotateMatrix.rotateMatrix(new int[][] {{1}}));
+		assertArrayEquals(new int[][] { { 1 } }, this.testQ1P6RotateMatrix.rotateMatrix(new int[][] { { 1 } }));
 	}
 
 	/**
@@ -92,7 +93,16 @@ public class Q1P6RotateMatrixTest {
 	 */
 	@Test
 	public void testRotateMatrixForTwoByTwoMatrix() {
-		assertArrayEquals(new int[][] {{4,1},{3,2}} , this.testQ1P6RotateMatrix.rotateMatrix(new int[][] {{1,2},{4,3}}));
+		assertArrayEquals(new int[][] { { 3, 1 }, { 4, 2 } },
+				this.testQ1P6RotateMatrix.rotateMatrix(new int[][] { { 1, 2 }, { 3, 4 } }));
 	}
 
+	/**
+	 * Test method for
+	 * {@link chapter.one.Q1P6RotateMatrix#rotateMatrix(int[][])}
+	 */
+	@Test
+	public void testRotateMatrixForThreeByThreeMatrix() {
+		assertArrayEquals(new int[][] {{7,4,1},{8,5,2},{9,6,3}}, this.testQ1P6RotateMatrix.rotateMatrix(new int[][] {{1,2,3},{4,5,6},{7,8,9}}));
+	}
 }
