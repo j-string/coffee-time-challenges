@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -130,6 +131,18 @@ public class WordsLessThanNCharactersLongTest {
 
 	}
 
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLong(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongForNEqualTo4WithTwoWordsReturnedAndMultipleSpaces() {
+		assertEquals(new ArrayList<String>(Arrays.asList("abc", "ones")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLong("abc  ones", 4));
+
+	}
+
 	// Start string tokenizer version tests
 
 	/**
@@ -223,8 +236,105 @@ public class WordsLessThanNCharactersLongTest {
 	@Test
 	public void testGetWordsLessThanNCharactersLongWithStringTokenizerForNEqualTo4WithTwoWordsReturnedAndMultipleSpaces() {
 		assertEquals(new ArrayList<String>(Arrays.asList("abc", "ones")),
-				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithStringTokenizer("abc  ones", 4));
+				this.testWordsLessThanNCharactersLong
+						.getWordsLessThanNCharactersLongWithStringTokenizer("abc  ones", 4));
 
 	}
 
+	// Start char array version tests
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNullString() {
+		assertEquals(new ArrayList<String>(),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray(null, 3));
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNullEmptyString() {
+		assertEquals(new ArrayList<String>(),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("", 3));
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo0() {
+		assertEquals(new ArrayList<String>(),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc one", 0));
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo3WithOneWordReturned() {
+		assertEquals(new ArrayList<String>(Arrays.asList("abc")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc ones", 3));
+
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo4WithTwoWordsReturned() {
+		assertEquals(new ArrayList<String>(Arrays.asList("abc", "ones")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc ones", 4));
+
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo4WithThreeWordsReturned() {
+
+		assertEquals(new ArrayList<String>(Arrays.asList("abc", "ones", "tax")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc ones tax", 4));
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo3WithTwoWordsReturned() {
+
+		assertEquals(new ArrayList<String>(Arrays.asList("abc", "tax")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc ones tax", 3));
+
+	}
+
+	/**
+	 * Test method for
+	 * {@link one.WordsLessThanNCharactersLong#getWordsLessThanNCharactersLongWithCharArray(java.lang.String, int)}
+	 * .
+	 */
+	@Test
+	public void testGetWordsLessThanNCharactersLongWithCharArrayForNEqualTo4WithTwoWordsReturnedAndMultipleSpaces() {
+
+		assertEquals(new ArrayList<String>(Arrays.asList("abc", "ones")),
+				this.testWordsLessThanNCharactersLong.getWordsLessThanNCharactersLongWithCharArray("abc  ones", 4));
+
+	}
 }

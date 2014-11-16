@@ -25,23 +25,19 @@ public class WordsLessThanNCharactersLong {
 
 		List<String> wordsLessThanNCharactersLong = new ArrayList<String>();
 
-		char[] inputChars = inputString.toCharArray();
-
 		StringBuilder stringBuilder = new StringBuilder("");
-		for (int i = 0; i < inputChars.length; i++) {
-			if (inputChars[i] == ' ' && stringBuilder.length() > 0) {
-				if (stringBuilder.length() <= nlength) {
+		for (int i = 0; i < inputString.length(); i++) {
+			if (inputString.charAt(i) == ' ') {
+				if (stringBuilder.toString().length() > 0 && stringBuilder.toString().length() <= nlength) {
 					wordsLessThanNCharactersLong.add(stringBuilder.toString());
-					stringBuilder = new StringBuilder("");
 				}
+				stringBuilder = new StringBuilder("");
 			} else {
-				stringBuilder.append(inputChars[i]);
+				stringBuilder.append(inputString.charAt(i));
 			}
 		}
 
-		System.out.println(stringBuilder.length());
-
-		if (stringBuilder.length() > 0 && stringBuilder.length() <= nlength) {
+		if (stringBuilder.toString().length() > 0 && stringBuilder.toString().length() <= nlength) {
 			wordsLessThanNCharactersLong.add(stringBuilder.toString());
 		}
 
@@ -72,4 +68,42 @@ public class WordsLessThanNCharactersLong {
 
 		return wordsLessThanNCharactersLong;
 	}
+
+	/**
+	 * @param inputString
+	 * @param nlength
+	 * @return
+	 */
+	public List<String> getWordsLessThanNCharactersLongWithCharArray(String inputString, int nlength) {
+
+		if (nlength <= 0 || inputString == null || inputString.length() == 0) {
+			return new ArrayList<String>();
+		}
+
+		List<String> wordsLessThanNCharactersLong = new ArrayList<String>();
+
+		char[] word = new char[nlength];
+		int charPosition = 0;
+		for (int i = 0; i < inputString.length(); i++) {
+			if (inputString.charAt(i) == ' ') {
+				if (charPosition > 0 && charPosition <= nlength) {
+					wordsLessThanNCharactersLong.add(new String(word).trim());
+				}
+				word = new char[nlength];
+				charPosition = 0;
+			} else {
+				if (charPosition < nlength) {
+					word[charPosition] = inputString.charAt(i);
+				}
+				charPosition++;
+			}
+		}
+
+		if (charPosition > 0 && charPosition <= nlength) {
+			wordsLessThanNCharactersLong.add(new String(word).trim());
+		}
+
+		return wordsLessThanNCharactersLong;
+	}
+
 }
